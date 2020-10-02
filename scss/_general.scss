@@ -1,0 +1,12 @@
+.container {
+  width: 80%;
+  margin: 50px auto;
+
+  .widget {
+    width: 45%;
+    background-color: $white-color;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    padding: 30px 0 40px;
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "apple-widgets",
+  "version": "1.0.0",
+  "description": "Sample project to train HTML, SASS, JS skills.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HNatalia/apple-widgets.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HNatalia/apple-widgets/issues"
+  },
+  "homepage": "https://github.com/HNatalia/apple-widgets#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
