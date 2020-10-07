@@ -1,13 +1,19 @@
-.item{
+.podcast{
   background: linear-gradient(#B54896, #6B05AA);
   margin: 0 auto;
   border-radius: 22px;
 
+  img {
+    opacity: 0;
+    transition: .7s;
+  }
+
   &.small {
-    // display: none;
-    height: 155px;
-    width: 155px;
-    .header {
+    opacity: 0;
+    transition: .7s;
+    @include widget-small-size; 
+
+    .currently-plaing {
       padding: 16px;
 
       img {
@@ -50,17 +56,22 @@
 
     }
 
-    .content {
+    .podcast-list {
       display: none;
+    }
+
+    &.active {
+      opacity: 1;
     }
   }
 
   &.medium {
-    // display: none;
-    width: 329px;
-    height: 155px;
+    opacity: 0;
+    transition: .7s;
+    overflow: hidden;
+    @include widget-medium-size;
 
-    .header {
+    .currently-plaing {
       padding: 16px 16px 9px 16px;
       display: flex;
 
@@ -92,7 +103,7 @@
           }
 
           .medium {
-            font-family: $main-font;
+            font-family: $regular-font;
             font-size: 12px;
             text-transform: capitalize;
             color: $white-color;
@@ -102,7 +113,7 @@
       }
     }
 
-    .content {
+    .podcast-list{
       padding: 0 16px 16px 16px;
 
       .row {
@@ -122,13 +133,19 @@
         }
       }
     }
+
+    &.active {
+      opacity: 1;
+    }
   }
 
   &.large {
-    width: 329px;
-    height: 345px;
+    opacity: 0;
+    transition: .7s;
+    @include widget-large-size;
+    overflow: hidden;
 
-    .header {
+    .currently-plaing {
       padding: 16px 16px 21px 16px;
       display: flex;
 
@@ -165,7 +182,7 @@
           }
 
           .medium {
-            font-family: $main-font;
+            font-family: $regular-font;
             font-size: 12px;
             text-transform: capitalize;
             color: $white-color;
@@ -173,7 +190,7 @@
           }
 
           .large {
-            font-family: $regular-font;
+            font-family: $main-font;
             font-size: 10px;
             text-transform: uppercase;
             color: $white-color;
@@ -183,12 +200,12 @@
       }
     }
 
-    .content {
-      background-color: rgba(0, 0, 0, .12);
+    .podcast-list {
+      background-color: rgba(0, 0, 0, 0.11);
       padding: 25px 16px 16px 16px;
+      box-shadow: inset 0px 4px 4px rgba(225, 225, 225, 0.20);
       border-bottom-right-radius: 22px;
       border-bottom-left-radius: 22px;
-      box-shadow: inset 0 4px 4px rgba(225, 255, 255, .20);
 
       .row {
         display: flex;
@@ -206,6 +223,16 @@
           margin-bottom: 0;
         }
       }
+    }
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  &.active {
+    img {
+      opacity: 1;
     }
   }
 }

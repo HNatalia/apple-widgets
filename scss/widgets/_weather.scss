@@ -1,0 +1,251 @@
+.weather {
+  margin: 0 auto;
+  border-radius: 22px;
+
+  p {
+    color: $white-color;
+  }
+
+  &.small {
+    @include widget-small-size;
+    background: linear-gradient(#3EAEDE, #1C86B4);
+    padding: 17px 16px;
+    opacity: 0;
+    transition: .7s;
+
+    .location {
+      font-family: $regular-font;
+      font-size: 15px;
+    }
+
+    .temp {
+      font-family: $thin-main-font;
+      font-size: 45px;
+      margin: -7px 0 7px 0;
+    }
+
+    .icon {
+      width: 16px;
+      height: 16px;
+    }
+
+    .current-state {
+      font-family: $light-font;
+      font-size: 13px;
+      margin: 2px 0 1px 0;
+    }
+
+    .more {
+      font-family: $regular-font;
+      font-size: 12px;
+    }
+
+    .description {
+      display: none;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  &.medium {
+    @include widget-medium-size;
+    background: linear-gradient(#1C86B4, #3EAEDE);
+    padding: 16px 16px 14px 16px;
+    opacity: 0;
+    transition: .7s;
+    overflow: hidden;
+
+    .current-info {
+      display: flex;
+      justify-content: space-between;
+
+      .location {
+        font-family: $main-font;
+        font-size: 16px;
+      }
+
+      .temp {
+        font-family: $thin-main-font;
+        font-size: 44px;
+        margin-top: -7px;
+      }
+
+      .secondary-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        .icon {
+          width: 18px;
+          height: 18px;
+        }
+    
+        .current-state {
+          font-family: $regular-font;
+          font-size: 13px;
+          margin: 9px 0 1px;
+        }
+    
+        .more {
+          font-family: $regular-font;
+          font-size: 13px;
+        }
+      }
+    }
+
+    .description {
+      .clock {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .col {
+          text-align: center;
+
+          .time {
+            font-family: $regular-font;
+            font-size: 12px;
+            text-transform: uppercase;
+          }
+  
+          .icon {
+            width: 18px;
+            height: 18px;
+            margin: 8px 0 3px;
+          }
+  
+          .temp {
+            font-family: $regular-font;
+            font-size: 13px;
+          }
+        }
+      }
+
+      .week {
+        opacity: 0;
+      }
+    }
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  &.large {
+    @include widget-large-size;
+    background: linear-gradient(#1C86B4, #3EAEDE);
+    padding: 16px 16px 14px 16px;
+    opacity: 1;
+    transition: .7s;
+    overflow: hidden;
+
+    .current-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+
+      .location {
+        font-family: $main-font;
+        font-size: 16px;
+      }
+
+      .temp {
+        font-family: $thin-main-font;
+        font-size: 44px;
+        margin-top: -7px;
+      }
+
+      .secondary-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        .icon {
+          width: 18px;
+          height: 18px;
+        }
+    
+        .current-state {
+          font-family: $regular-font;
+          font-size: 13px;
+          margin: 9px 0 1px;
+        }
+    
+        .more {
+          font-family: $regular-font;
+          font-size: 13px;
+        }
+      }
+    }
+
+    .description {
+      .clock {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        border-top: 1px solid rgba(225, 225, 225, .2);
+        border-bottom: 1px solid rgba(225, 225, 225, .2);
+        padding: 0 2px;
+
+        .col {
+          text-align: center;
+          margin: 8px 0;
+
+          .time {
+            font-family: $regular-font;
+            font-size: 12px;
+            text-transform: uppercase;
+          }
+  
+          .icon {
+            width: 18px;
+            height: 18px;
+            margin: 8px 0 3px;
+          }
+  
+          .temp {
+            font-family: $regular-font;
+            font-size: 13px;
+          }
+        }
+      }
+
+      .week {
+        margin-top: 8px;
+        display: flex;
+        justify-content: space-between;
+
+        .day {
+          font-family: $light-font;
+          font-size: 13px;
+          margin-bottom: 16px;
+        }
+
+        .col:nth-child(2) {
+          display: flex;
+          flex-direction: column;
+
+          .icon {
+            width: 18px;
+            height: 18px;
+            margin-bottom: 13px;
+          }
+        }
+
+        .degs {
+          display: flex;
+          margin-bottom: 16px;
+          font-family: $regular-font;
+          font-size: 13px;
+
+          .min-temp {
+            margin-left: 26px;
+            opacity: .5;
+          }
+        }
+      }
+    }
+  }
+}

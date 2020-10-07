@@ -4,3 +4,18 @@
   color: $white-color;
   letter-spacing: 1px;
 }
+
+@mixin widget-small-size {
+  height: 155px;
+  width: 155px;
+}
+
+@mixin widget-medium-size {
+  width: 329px;
+  height: 155px;
+}
+
+@mixin widget-large-size {
+  width: 329px;
+  height: 345px;
+}
